@@ -44,6 +44,8 @@ def scrap_to_json(url):
 if __name__ == "__main__":
     base_url = "https://www.indeed.co.in/jobs?q=software+developer&l=Bengaluru,+Karnataka&start="
     url_list = []
+    # Scrap the first 10 pages that includes 100 job postings.
+    # Change the second argument of range to run for more pages.
     for page in range(0,100,10):
         url_list.append(base_url+str(page))
     # Creates a Pool with cpu_count number of threads  
